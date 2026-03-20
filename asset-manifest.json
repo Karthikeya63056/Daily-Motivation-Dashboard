@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Daily-Motivation-Dashboard/static/css/main.8a193080.css",
+    "main.js": "/Daily-Motivation-Dashboard/static/js/main.9dc5070e.js",
+    "index.html": "/Daily-Motivation-Dashboard/index.html",
+    "main.8a193080.css.map": "/Daily-Motivation-Dashboard/static/css/main.8a193080.css.map",
+    "main.9dc5070e.js.map": "/Daily-Motivation-Dashboard/static/js/main.9dc5070e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8a193080.css",
+    "static/js/main.9dc5070e.js"
+  ]
+}
