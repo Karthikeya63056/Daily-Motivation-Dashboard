@@ -1,0 +1,43 @@
+:root {
+  --font-family: 'Inter', sans-serif;
+
+  --color-primary-light: 6, 182, 212;
+  --color-primary-dark: 7, 155, 182;
+  --color-text-light: 17, 24, 39;
+  --color-text-dark: 243, 244, 246;
+  --color-subtext-light: 107, 114, 128;
+  --color-subtext-dark: 156, 163, 175;
+  --color-bg-light: 249, 250, 251;
+  --color-bg-dark: 17, 24, 39;
+  --color-card-light: 255, 255, 255;
+  --color-card-dark: 31, 41, 55;
+  --color-border-light: 229, 231, 235;
+  --color-border-dark: 55, 65, 81;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  --border-radius: 0.75rem;
+}
+
+body {
+  --primary: var(--color-primary-light);
+  --text: var(--color-text-light);
+  --subtext: var(--color-subtext-light);
+  --background: var(--color-bg-light);
+  --card-bg: var(--color-card-light);
+  --border: var(--color-border-light);
+  
+  background-color: rgb(var(--background));
+  color: rgb(var(--text));
+}
+
+body.dark {
+  --primary: var(--color-primary-dark);
+  --text: var(--color-text-dark);
+  --subtext: var(--color-subtext-dark);
+  --background: var(--color-bg-dark);
+  --card-bg: var(--color-card-dark);
+  --border: var(--color-border-dark);
+}

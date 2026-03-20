@@ -1,0 +1,263 @@
+/* App Container */
+.app-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.header__title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.header__subtitle {
+    font-size: 1rem;
+    color: rgb(var(--subtext));
+}
+
+.header__badge {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: rgba(var(--primary), 0.1);
+    color: rgb(var(--primary));
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(var(--card-bg));
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgb(var(--border));
+}
+
+.tabs__button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--subtext);
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+}
+
+.tabs__button--active {
+    color: var(--text);
+    background-color: var(--background);
+    box-shadow: var(--shadow-md);
+}
+
+/* QuoteCard */
+.quote-card {
+    background-color: rgb(var(--card-bg));
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgb(var(--border));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.quote-card__text {
+    font-size: 1.75rem;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    max-width: 90%;
+}
+
+.quote-card__author {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(var(--subtext));
+    margin-bottom: 2.5rem;
+}
+
+.quote-card__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.quote-card__button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    transition: all 0.2s ease-in-out;
+}
+
+.quote-card__button--primary {
+    background-color: rgb(var(--primary));
+    color: white;
+}
+
+.quote-card__button--primary:hover {
+    opacity: 0.9;
+}
+
+.quote-card__button--secondary {
+    background-color: rgb(var(--background));
+    color: rgb(var(--text));
+    border: 1px solid rgb(var(--border));
+}
+
+.quote-card__button--secondary:hover {
+    background-color: rgb(var(--border));
+}
+
+/* Loader */
+.loader {
+    border: 4px solid rgb(var(--border));
+    border-top: 4px solid rgb(var(--primary));
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 2rem auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* SearchBar */
+.search-bar {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.search-bar__input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: rgb(var(--card-bg));
+    color: rgb(var(--text));
+    border: 1px solid rgb(var(--border));
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.search-bar__input:focus {
+    outline: none;
+    border-color: rgb(var(--primary));
+    box-shadow: 0 0 0 3px rgba(var(--primary), 0.2);
+}
+
+/* QuoteList */
+.quote-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.quote-list__item {
+    background-color: rgb(var(--card-bg));
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid rgb(var(--border));
+    box-shadow: var(--shadow-md);
+    animation: fadeIn 0.5s ease-in-out;
+}
+.quote-list__item p {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+.quote-list__item footer {
+    font-size: 0.9rem;
+    color: rgb(var(--subtext));
+    text-align: right;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: rgb(var(--card-bg));
+    border-radius: var(--border-radius);
+    border: 1px solid rgb(var(--border));
+}
+
+.empty-state__icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.empty-state__message {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--subtext);
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: rgb(var(--card-bg));
+    color: rgb(var(--text));
+    border: 1px solid rgb(var(--border));
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadow-md);
+    font-size: 1.25rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.quote-card__button.liked {
+    animation: liked 0.5s ease;
+}
+
+@keyframes liked {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
